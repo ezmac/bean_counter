@@ -41,9 +41,8 @@ module.exports = {
       required: true
     },
     description: "json",
+
     updateFree : function() {
-      if (undefined == sails['computerTimeouts'])
-        sails['computerTimeouts'] = {};
       if (sails['computerTimeouts'][this.name] != undefined){
         console.log("Clearing timeout on "+this.display+".")
         clearTimeout(sails['computerTimeouts'][this.name]);
@@ -58,14 +57,8 @@ module.exports = {
       console.log("Computer "+this.display+" marked as free by logoff action");
       return "success";
     },
+
     updateUsed : function() {
-      if (undefined == sails['computerTimeouts'])
-        sails['computerTimeouts'] = {
-          settings: {
-            sweepTimeout: 2,
-            usedTimeout: 0.5
-          }
-        };
       if (sails['computerTimeouts'][this.name] != undefined){
         console.log("Clearing timeout on "+this.display+".")
         clearTimeout(sails['computerTimeouts'][this.name]);
@@ -73,10 +66,7 @@ module.exports = {
       }
       this.status='used';
       this.timestamp = new Date();
-      this.save(function(err,computer){
-        console.log(err);
-        console.log(computer);
-      });
+      this.save();
       console.log("Computer "+this.display+" marked as used");
       this.wait();
       return "success";
@@ -87,7 +77,7 @@ module.exports = {
       var free = function(){
         now = new Date();
         lastUpdate = new Date(self.timestamp);
-        if (lastUpdate.getTime()+ sails['computerTimeouts']['settings']['usedTimeout']*60000 < now.getTime()) {
+        if (lastUpdate.getTime()+ sails.config.beancounter.usedTimeout * 60000 < now.getTime()) {
           self.status="free";
           self.timestamp = new Date();
           self.save();
@@ -95,7 +85,7 @@ module.exports = {
         }
       }
       console.log("Set timeout for computer " + self.display);
-      sails['computerTimeouts'][self.name] = setTimeout(free, sails['computerTimeouts']['settings']['usedTimeout']*60000);
+      sails['computerTimeouts'][self.name] = setTimeout(free, sails.config.beancounter.usedTimeout);
     }
 
   },
@@ -106,22 +96,19 @@ module.exports = {
 
   },
   afterUpdate: function(computer, cb){
-    console.log("in afterSave hook: ");
-    console.log(computer);
       Computer.publishUpdate(computer.id, [computer]);
-
     cb();
 
 
   },
 
   sweep : function(){
-    Computer.all(function(err, computers){
+    Computer.find({status: 'used'},function(err, computers){
       for (index in computers){
         computer = computers[index];
         now = new Date();
         lastUpdate = new Date(computer.timestamp);
-        if (lastUpdate.getTime()+ 3*60000 < now.getTime()) {
+        if (lastUpdate.getTime()+ Computer.usedTimeout < now.getTime()) {
           computer.status="free";
           computer.timestamp = now;
           computer.save();

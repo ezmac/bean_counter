@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app='BeanCounterApp' lang="en">
    <head>
-     <base href="http://lib.msstate.edu/" />
+     <base href="http://mylib.msstate.edu/" />
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>College of Architecture, Art and Design Library Computer Lab &raquo; Mississippi State University Libraries</title>
 
+      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"> </script>
+      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-resource.js"> </script>
+      <script type="text/javascript" src="//mylib.msstate.edu:1337/js/beancounter.js">
+      </script>
             <!-- Bootstrap
  -->
         <link href="/_assets/css/bootstrap.min.css" rel="stylesheet">
@@ -39,7 +43,7 @@
         }
         </style>
         <![endif]-->
-<script type="text/javascript" src="http://4b422d97.ngrok.com/js/dependencies/sails.io.js">
+<script type="text/javascript" src="http://mylib.msstate.edu:1337/js/dependencies/sails.io.js">
 </script>
 
    </head>
@@ -422,8 +426,10 @@
                   <a href="?room=ref">Reference Lab</a>
                   <br />
 
-                  <div id="floorplan" style="display:inline-block;position:relative;">
+                  <div ng-controller="BeanCounterCtrl" id="floorplan" style="display:inline-block;position:relative;">
                      <img id="floorplanimage" src="/_assets/img/floorplans/imcmap.png" />
+
+                     <img ng-repeat="computer in computers" style="position:absolute;left:{{computer.x}};top:{{computer.y}};" ng-src="/_assets/img/comp_available.png" />
                   </div>
 
 
@@ -741,7 +747,7 @@ $(document).ready(function(){});
             var image_width = this.width;
             console.log('Image Width: ' + image_width);
             console.log('Image Height: ' + image_height);
-            $.get('http://4b422d97.ngrok.com/computer/',null,function(comp_data) {
+            $.get('computer/',null,function(comp_data) {
                console.log(comp_data);
                comp_data = $.grep(comp_data, function(computer) {
                   return computer.room == "imc";

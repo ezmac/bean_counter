@@ -58,6 +58,7 @@ When a computer pings, it is marked as used and a timeout is set.  When the time
 
  - secure pings and frees from client (somehow)
  - make front end javascript more friendly (it's a mess, but works)
+   - probably using backbone.js
  - add some computer/lab management
 
 

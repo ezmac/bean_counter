@@ -9,7 +9,7 @@
 
       <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"> </script>
       <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-resource.js"> </script>
-      <script type="text/javascript" src="//mylib.msstate.edu:1337/js/beancounter.js">
+      <script type="text/javascript" src="http://mylib.msstate.edu:8349/js/beancounter.js">
       </script>
             <!-- Bootstrap
  -->
@@ -43,7 +43,7 @@
         }
         </style>
         <![endif]-->
-<script type="text/javascript" src="http://mylib.msstate.edu:1337/js/dependencies/sails.io.js">
+<script type="text/javascript" src="/_assets/js/dependencies/sails.io.js">
 </script>
 
    </head>
@@ -429,7 +429,7 @@
                   <div ng-controller="BeanCounterCtrl" id="floorplan" style="display:inline-block;position:relative;">
                      <img id="floorplanimage" src="/_assets/img/floorplans/imcmap.png" />
 
-                     <img ng-repeat="computer in computers" style="position:absolute;left:{{computer.x}};top:{{computer.y}};" ng-src="/_assets/img/comp_available.png" />
+                     <img ng-repeat="computer in computers" style="position:absolute;left:{{percent_x(computer)}};top:{{percent_y(computer)}};" ng-src="/_assets/img/comp_{{display(computer)}}.png" />
                   </div>
 
 
@@ -740,6 +740,7 @@ $(document).ready(function(){});
 
       <script type="text/javascript">
 
+        /*
          var img = new Image();
          img.onload = function() {
            debugger
@@ -747,7 +748,7 @@ $(document).ready(function(){});
             var image_width = this.width;
             console.log('Image Width: ' + image_width);
             console.log('Image Height: ' + image_height);
-            $.get('computer/',null,function(comp_data) {
+            $.get('/api/computers/',null,function(comp_data) {
                console.log(comp_data);
                comp_data = $.grep(comp_data, function(computer) {
                   return computer.room == "imc";
@@ -794,6 +795,7 @@ $(document).ready(function(){});
 
              });
            });
+           */
 
       </script>
 

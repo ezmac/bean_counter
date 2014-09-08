@@ -5,7 +5,7 @@ import time
 import atexit
 import sys
 
-SERVER_URL = 'http://130.18.249.157:1337/computer/'
+SERVER_URL = 'http://localhost:8349/api/computers/'
 
 if len(sys.argv) < 1:
   exit("please specify computer name")

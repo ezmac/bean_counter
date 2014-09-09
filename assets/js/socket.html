@@ -1,33 +1,33 @@
 <!DOCTYPE html>
-<html ng-app='BeanCounterApp' lang="en">
-   <head>
-     <base href="http://mylib.msstate.edu/" />
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>College of Architecture, Art and Design Library Computer Lab &raquo; Mississippi State University Libraries</title>
+<html id="ng-app" ng-app='BeanCounterApp' lang="en">
+  <head>
+    <base href="http://mylib.msstate.edu/" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>College of Architecture, Art and Design Library Computer Lab &raquo; Mississippi State University Libraries</title>
 
-      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"> </script>
-      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-resource.js"> </script>
-      <script type="text/javascript" src="http://mylib.msstate.edu:8349/js/beancounter.js">
-      </script>
-            <!-- Bootstrap
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"> </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-resource.js"> </script>
+    <script type="text/javascript" src="http://mylib.msstate.edu:8349/js/beancounter.js">
+    </script>
+    <!-- Bootstrap
  -->
-        <link href="/_assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/_assets/css/bootstrap.min.css" rel="stylesheet">
     
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
           <script src="//blogs.library.msstate.edu/libraries/js/html5shiv.min.js></script>
           <script src="//blogs.library.msstate.edu/libraries/js/respond.min.js"></script>
         <![endif]-->
-        
-        <!-- MSU Libraries design styles -->
-        <link href="/_assets/css/style.css" rel="stylesheet" type="text/css" />
-
-
-
-        <!--[if lt IE 9]>
+    
+    <!-- MSU Libraries design styles -->
+    <link href="/_assets/css/style.css" rel="stylesheet" type="text/css" />
+    
+    
+    
+    <!--[if lt IE 9]>
         <style type="text/css">
         /* fix IE8 */
         .msulib__search .row div ul li a {
@@ -43,250 +43,250 @@
         }
         </style>
         <![endif]-->
-<script type="text/javascript" src="/_assets/js/dependencies/sails.io.js">
-</script>
+    <script type="text/javascript" src="/_assets/js/dependencies/sails.io.js">
+    </script>
 
-   </head>
-   <body class="container-fluid">
-      <!-- header -->
-      <div class="row header">
-         <div class="col-lg-12">
-            <!-- header -->
-<!-- this version has no us grant logo-it is not needed on second-level pages -->
-            
-	<!-- library logo -->
-    <div class="row">
-                
-    	<!-- library logo -->
-        <div class="col-lg-9 col-xs-12 logo-msu">
-        	<a href="http://www.msstate.edu"><img src="/_assets/img/header-logo-msstate.png" alt="Mississippi State University" title="Mississippi State University" /></a><br />
+  </head>
+  <body class="container-fluid">
+    <!-- header -->
+    <div class="row header">
+      <div class="col-lg-12">
+        <!-- header -->
+        <!-- this version has no us grant logo-it is not needed on second-level pages -->
+        
+        <!-- library logo -->
+        <div class="row">
+          
+          <!-- library logo -->
+          <div class="col-lg-9 col-xs-12 logo-msu">
+            <a href="http://www.msstate.edu"><img src="/_assets/img/header-logo-msstate.png" alt="Mississippi State University" title="Mississippi State University" /></a><br />
             <a class="univlib" href="/index.php"><img src="/_assets/img/header-logo-univlib.png" alt="Mississippi State University Libraries" title="Mississippi State University Libraries" /></a>
-        </div><!-- /library logo -->
-                
-        <!-- clear floats--><div class="clearfix visible-lg visible-xs"></div>
-                
-    </div><!-- /row -->
-            <!-- subheader -->
-<div class="col-xs-12 subheader">
-	<div class="row">
-    	<!-- hours -->
-		        <!-- generated 2014-09-04 13:19:01 -->
-    <div class="col-lg-4 col-xs-12 hours">
+          </div><!-- /library logo -->
+          
+          <!-- clear floats--><div class="clearfix visible-lg visible-xs"></div>
+          
+        </div><!-- /row -->
+        <!-- subheader -->
+        <div class="col-xs-12 subheader">
+          <div class="row">
+            <!-- hours -->
+            <!-- generated 2014-09-04 13:19:01 -->
+            <div class="col-lg-4 col-xs-12 hours">
               <div class="list-group">
-                  <a class="list-group-item" href="/hours/"><span class="bold">Today's hours:</span>
-    7:00 AM - 1:45 AM
-    <span class="bold seemore">See more</span></a>
-                </div>
+                <a class="list-group-item" href="/hours/"><span class="bold">Today's hours:</span>
+                  7:00 AM - 1:45 AM
+                  <span class="bold seemore">See more</span></a>
+              </div>
             </div>      	<!-- /hours -->
-        
-        <!-- ask a librarian button -->
-        <div class="col-lg-3 col-xs-12 col-lg-offset-5 askalibrarian">
-        	<a href="#" class="askalibrarian__logo"><img src="/_assets/img/nav-logo-aal-small.png" alt="Need help? Ask a librarian!" title="Need help? Ask a librarian!" /></a>
-        </div><!-- /ask a librarian -->
-        
-        <!-- clear floats--><div class="clearfix visible-lg visible-xs"></div>
-    </div><!-- /row -->
-
-    <!-- need help? -->
-    <div class="needhelp">
-       	<div class="row">
-                  
-    	    <!-- intro -->
-            <div class="col-lg-2 col-xs-12">
-        	    <h3 align="center">Need help?<br /><img src="/_assets/img/logo-aal.png"></h3>
-            </div><!-- /intro -->
-
-            <!-- live chat -->
-            <div class="col-lg-2 col-xs-12">
-            	<h4><i class="glyphicon glyphicon-comment"></i> Live chat</h4>
-             <div id="libchat_btn_widget"></div> 
+            
+            <!-- ask a librarian button -->
+            <div class="col-lg-3 col-xs-12 col-lg-offset-5 askalibrarian">
+              <a href="#" class="askalibrarian__logo"><img src="/_assets/img/nav-logo-aal-small.png" alt="Need help? Ask a librarian!" title="Need help? Ask a librarian!" /></a>
+            </div><!-- /ask a librarian -->
+            
+            <!-- clear floats--><div class="clearfix visible-lg visible-xs"></div>
+          </div><!-- /row -->
+          
+          <!-- need help? -->
+          <div class="needhelp">
+            <div class="row">
+              
+              <!-- intro -->
+              <div class="col-lg-2 col-xs-12">
+                <h3 align="center">Need help?<br /><img src="/_assets/img/logo-aal.png"></h3>
+              </div><!-- /intro -->
+              
+              <!-- live chat -->
+              <div class="col-lg-2 col-xs-12">
+                <h4><i class="glyphicon glyphicon-comment"></i> Live chat</h4>
+                <div id="libchat_btn_widget"></div> 
                 <script> var libchat_26b034aab5c3bcd152811bcbc26b915c = { iid:1120, key:'6aa635f6d2a2cd4', width:'400px' }</script> <script type="text/javascript" src="//v2.libanswers.com/load_chat.php?hash=26b034aab5c3bcd152811bcbc26b915c&options=libchat_26b034aab5c3bcd152811bcbc26b915c"></script>
                 <p><a href="#" class="label label-warning shadow-dark" data-toggle="modal" data-target="#modal--chathours"><i class="glyphicon glyphicon-time"></i> Chat Hours</a></p>
-            </div>
-            <!-- /live chat -->
-            
-            <!-- faq -->
-            <div class="col-lg-3 col-xs-12">
+              </div>
+              <!-- /live chat -->
+              
+              <!-- faq -->
+              <div class="col-lg-3 col-xs-12">
                 <h4><i class="glyphicon glyphicon-question-sign"></i> FAQ</h4>
                 <p><a href="http://ask.library.msstate.edu">See frequently asked questions, browse questions by topic, or email your question</a></p>
-            </div><!-- /faq -->
-
-            <!-- call or stop by -->
-            <div class="col-lg-2 col-xs-12">
-            	<h4><i class="glyphicon glyphicon-home"></i> Call or stop by</h4>
+              </div><!-- /faq -->
+              
+              <!-- call or stop by -->
+              <div class="col-lg-2 col-xs-12">
+                <h4><i class="glyphicon glyphicon-home"></i> Call or stop by</h4>
                 <p><strong><em>Reference Desk:</em></strong><br />(662) 325-7667</p>
                 <p>
-                	<a href="#" class="label label-warning shadow-dark" data-toggle="modal" data-target="#modal--refdeskhours"><i class="glyphicon glyphicon-time"></i> Desk Hours</a>
-                    &nbsp;<a href="#" class="label label-success shadow-dark" data-toggle="modal" data-target="#modal--rs"><i class="glyphicon glyphicon-map-marker"></i> Location</a>
+                  <a href="#" class="label label-warning shadow-dark" data-toggle="modal" data-target="#modal--refdeskhours"><i class="glyphicon glyphicon-time"></i> Desk Hours</a>
+                  &nbsp;<a href="#" class="label label-success shadow-dark" data-toggle="modal" data-target="#modal--rs"><i class="glyphicon glyphicon-map-marker"></i> Location</a>
                 </p>
-            </div><!-- /call or stop by -->
-
-            <!-- consult, more help -->
-            <div class="col-lg-3 col-xs-12">
-            	<h4><i class="glyphicon glyphicon-user"></i> Subject specialists</h4>
+              </div><!-- /call or stop by -->
+              
+              <!-- consult, more help -->
+              <div class="col-lg-3 col-xs-12">
+                <h4><i class="glyphicon glyphicon-user"></i> Subject specialists</h4>
                 <ul class="nostyle">
-                	<li><a href="/help/specialists/">Find a specialist</a></li>
-                    <li><a href="/help/consult/">Request an appointment</a></li>
+                  <li><a href="/help/specialists/">Find a specialist</a></li>
+                  <li><a href="/help/consult/">Request an appointment</a></li>
                 </ul>
-            	<h4 align="right"><a href="/help/"><i class="glyphicon glyphicon-plus"></i> More</a></h4>
-            </div><!-- /more help -->
+                <h4 align="right"><a href="/help/"><i class="glyphicon glyphicon-plus"></i> More</a></h4>
+              </div><!-- /more help -->
+              
+              <!-- clear floats --><div class="clearfix visible-lg"></div>
+            </div><!-- /row -->        
             
-            <!-- clear floats --><div class="clearfix visible-lg"></div>
-        </div><!-- /row -->        
-            
-    </div><!-- /need help? -->
-</div><!-- /subheader -->
-         </div>
-      </div><!-- /header -->
+          </div><!-- /need help? -->
+        </div><!-- /subheader -->
+      </div>
+    </div><!-- /header -->
 
-      <!-- nav -->
-      <div class="row navbar navbar-inverse">
-         <div class="navbar-collapse collapse navbar-inverse-collapse">
-            <ul id="main_navigation" class="nav navbar-nav navbar-all">
-  	<li><a href="/index.php"><i class="glyphicon glyphicon-home"></i></a></li>
-    <li class="dropdown dropdown--blue"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Search, Find, Write <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-            <li><a href="/search/">Search for library materials</a></li>
-            <li><a href="/workshops/">Attend a research workshop</a></li>
-            <li><a href="http://guides.library.msstate.edu/citationguides">Cite sources in several styles</a></li>
-            <li><a href="http://guides.library.msstate.edu">See guides to specific topics</a></li>
-            <li><a href="/thesis/">Format a thesis or dissertation</a></li>
-            <li><a href="/write/">Get writing advice</a></li>
-            <li class="more"><a href="/search/">More <i class="glyphicon glyphicon-circle-arrow-right"></i></a></li>
+    <!-- nav -->
+    <div class="row navbar navbar-inverse">
+      <div class="navbar-collapse collapse navbar-inverse-collapse">
+        <ul id="main_navigation" class="nav navbar-nav navbar-all">
+          <li><a href="/index.php"><i class="glyphicon glyphicon-home"></i></a></li>
+          <li class="dropdown dropdown--blue"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Search, Find, Write <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/search/">Search for library materials</a></li>
+              <li><a href="/workshops/">Attend a research workshop</a></li>
+              <li><a href="http://guides.library.msstate.edu/citationguides">Cite sources in several styles</a></li>
+              <li><a href="http://guides.library.msstate.edu">See guides to specific topics</a></li>
+              <li><a href="/thesis/">Format a thesis or dissertation</a></li>
+              <li><a href="/write/">Get writing advice</a></li>
+              <li class="more"><a href="/search/">More <i class="glyphicon glyphicon-circle-arrow-right"></i></a></li>
+            </ul>
+          </li>
+          <li class="dropdown dropdown--green"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Borrow, Renew, Request <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="http://mlp.ent.sirsi.net/client/msstate">Log into the Online Catalog</a></li>
+              <li><a href="/borrow/">Request library materials</a></li>
+              <li><a href="/borrow/hold/">Place a hold on a book</a></li>
+              <li><a href="/borrow/renew/">Renew books</a></li>
+              <li><a href="/borrow/borrowing-periods/">See borrowing periods</a></li>
+              <li><a href="/borrow/equipment/">Borrow laptops, cameras, phone chargers, and more</a></li>
+              <li class="more"><a href="/borrow/">More <i class="glyphicon glyphicon-circle-arrow-right"></i></a></li>
+            </ul>
+          </li>
+          <li class="dropdown dropdown--orange"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Collections <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="http://library.msstate.edu/specialcollections">Special Collections</a></li>
+              <li><a href="http://digital.library.msstate.edu">Digital Collections</a></li>
+              <li><a href="/collections/">General Collection</a></li>
+              <li><a href="http://www.usgrantlibrary.org/access/overview.asp">Ulysses S. Grant Presidential Collection</a></li>
+              <li class="more"><a href="/collections/">More <i class="glyphicon glyphicon-circle-arrow-right"></i></a></li>
+            </ul>
+          </li>
+          <li class="dropdown dropdown--red"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Technology <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/documents/">Print, scan, copy, fax, or laminate</a></li>
+              <li><a href="/computers/">Find a computer lab</a></li>
+              <li><a href="/network/">Connect to the MSU network</a></li>
+              <li><a href="/help/software/">Get software training</a></li>
+              <li><a href="/borrow/equipment/">Borrow laptops, cameras, phone chargers, and more</a></li>
+              <li class="more"><a href="/technology/">More <i class="glyphicon glyphicon-circle-arrow-right"></i></a></li>
+            </ul>
+          </li>
+          <li class="dropdown dropdown--purple"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Places <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/libraries/">Libraries and centers</a></li>
+              <li><a href="/museums/">Museums and Exhibits</a></li>
+              <li><a href="http://library.msstate.edu/services/roomreserve.asp">Meeting rooms</a></li>
+              <li><a href="/places/groupstudy/">Group study rooms</a></li>
+              <li><a href="/floorplans/">Floor plans</a></li>
+              <li><a href="/directions/">Directions, maps, and parking</a></li>
+              <li class="more"><a href="/places/">More <i class="glyphicon glyphicon-circle-arrow-right"></i></a></li>
+            </ul>
+          </li>
         </ul>
-    </li>
-    <li class="dropdown dropdown--green"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Borrow, Renew, Request <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-            <li><a href="http://mlp.ent.sirsi.net/client/msstate">Log into the Online Catalog</a></li>
-            <li><a href="/borrow/">Request library materials</a></li>
-            <li><a href="/borrow/hold/">Place a hold on a book</a></li>
-            <li><a href="/borrow/renew/">Renew books</a></li>
-            <li><a href="/borrow/borrowing-periods/">See borrowing periods</a></li>
-            <li><a href="/borrow/equipment/">Borrow laptops, cameras, phone chargers, and more</a></li>
-            <li class="more"><a href="/borrow/">More <i class="glyphicon glyphicon-circle-arrow-right"></i></a></li>
+        <ul  class="nav col-lg-4 col-md-3 col-sm-12 col-xs-12 navbar-nav navbar-right msulib__search form-group-sm hidden-sm visible-xs-block hidden-md hidden-lg">
+          <!-- smaller search box -->
+          <div class="row">
+            <div class="col-xs-12"><!--btn group-->
+              <button id="search__selector_button" type="button" class="search__selector_button btn col-xs-12 btn-default dropdown-toggle" data-toggle="dropdown">Choose a search type <span class="caret"></span></button>
+
+              <ul id="search__selector_list" class="dropdown-menu">
+                <li><a href="#" data-search-type="discovery">Discovery</a></li>
+                <li><a href="#" data-search-type="online_catalog">Online Catalog</a></li>
+                <li><a href="#" data-search-type="databases">Databases</a></li>
+                <li><a href="#" data-search-type="e_journals">E-Journals</a></li>
+                <li><a href="/reserves/" >Course Reserves</a></li>
+                <li><a href="#" data-search-type="digital_collections">Digital Collections</a></li>
+                <li><a href="#" data-search-type="special_collections_finding_aids">Special Collections Finding Aids</a></li>
+                <li><a href="http://guides.library.msstate.edu" >Research Guides</a></li>
+                <li><a href="#" data-search-type="faq">Frequently Asked Questions</a></li>
+                <li><a href="#" data-search-type="library_website">Library Website</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Theses &amp; Dissertations</li>
+                <li><a href="http://sun.library.msstate.edu/ETD-db/ETD-search/search">By MSU students</a></li>
+                <li><a href="https://login.proxy.library.msstate.edu/login?url=http://proquest.umi.com/login?COPT=REJTPUcyODcrM2IwZiZJTlQ9MCZWRVI9Mg==&clientId=2244" >By students worldwide</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+            <div class="col-xs-12 search__input_container" id="search__input_container" >
+              <!-- testing -->
+              <form id="search__form" action="" onsubmit="return ebscoHostSearchGo(this);" method="post">
+                <input id="ebscohostwindow" name="ebscohostwindow" type="hidden" value="1" />
+                <input id="ebscohosturl" name="ebscohosturl" type="hidden" value="https://search.ebscohost.com/login.aspx?direct=true&site=eds-live&scope=site&type=0&authtype=ip,guest&custid=magn1307&groupid=main&profile=eds" />
+                <input id="ebscohostsearchsrc" name="ebscohostsearchsrc" type="hidden" value="db" />
+                <input id="ebscohostsearchmode" name="ebscohostsearchmode" type="hidden" value="+AND+" />
+                <input id="ebscohostkeywords" name="ebscohostkeywords" type="hidden" value="" />
+                <input name="ebscohostsearchtext" type="text"  class=" form-control" placeholder="Enter a search term" />
+              </form>
+            </div>
+            <!--<input type="text" id="inputLarge" class="form-control" placeholder="Enter a search term">-->
+            <div class="col-xs-12">
+              <span id="search__submit_button_container" class="search__submit_button_container" class="">
+                <input form="search__form" class="btn-primary col-xs-12 btn" type="submit" value="Search" />
+              </span>
+            </div>
+          </div><!-- /input-group -->
         </ul>
-    </li>
-    <li class="dropdown dropdown--orange"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Collections <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-            <li><a href="http://library.msstate.edu/specialcollections">Special Collections</a></li>
-            <li><a href="http://digital.library.msstate.edu">Digital Collections</a></li>
-            <li><a href="/collections/">General Collection</a></li>
-            <li><a href="http://www.usgrantlibrary.org/access/overview.asp">Ulysses S. Grant Presidential Collection</a></li>
-            <li class="more"><a href="/collections/">More <i class="glyphicon glyphicon-circle-arrow-right"></i></a></li>
+        <ul class="nav col-lg-4 col-md-12 col-sm-12 col-xs-12 msulib__search form-group visible-sm-block hidden-xs visible-md-block visible-lg-block">
+          <!-- larger search box -->
+          <div class="input-group">
+            <div  id="search__dropdown_container_lg" class="input-group-btn">
+              <button id="search__selector_button_lg" type="button" class="btn search__selector_button btn-default dropdown-toggle" data-toggle="dropdown">Choose a search type <span class="caret"></span></button>
+
+              <ul id="search__selector_list" class="dropdown-menu">
+                <li><a href="#" data-search-type="discovery">Discovery</a></li>
+                <li><a href="#" data-search-type="online_catalog">Online Catalog</a></li>
+                <li><a href="#" data-search-type="databases">Databases</a></li>
+                <li><a href="#" data-search-type="e_journals">E-Journals</a></li>
+                <li><a href="/reserves/" >Course Reserves</a></li>
+                <li><a href="#" data-search-type="digital_collections">Digital Collections</a></li>
+                <li><a href="#" data-search-type="special_collections_finding_aids">Special Collections Finding Aids</a></li>
+                <li><a href="http://guides.library.msstate.edu" >Research Guides</a></li>
+                <li><a href="#" data-search-type="faq">Frequently Asked Questions</a></li>
+                <li><a href="#" data-search-type="library_website">Library Website</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Theses &amp; Dissertations</li>
+                <li><a href="http://sun.library.msstate.edu/ETD-db/ETD-search/search">By MSU students</a></li>
+                <li><a href="https://login.proxy.library.msstate.edu/login?url=http://proquest.umi.com/login?COPT=REJTPUcyODcrM2IwZiZJTlQ9MCZWRVI9Mg==&clientId=2244" >By students worldwide</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+            <div  id="search__input_container_lg" class="search__input_container" >
+              <form id="search__form_lg" action="" onsubmit="return ebscoHostSearchGo(this);" method="post">
+                <input id="ebscohostwindow" name="ebscohostwindow" type="hidden" value="1" />
+                <input id="ebscohosturl" name="ebscohosturl" type="hidden" value="https://search.ebscohost.com/login.aspx?direct=true&site=eds-live&scope=site&type=0&authtype=ip,guest&custid=magn1307&groupid=main&profile=eds" />
+                <input id="ebscohostsearchsrc" name="ebscohostsearchsrc" type="hidden" value="db" />
+                <input id="ebscohostsearchmode" name="ebscohostsearchmode" type="hidden" value="+AND+" />
+                <input id="ebscohostkeywords" name="ebscohostkeywords" type="hidden" value="" />
+                <input name="ebscohostsearchtext" type="text"  class="form-control" placeholder="Enter a search term" />
+              </form>
+            </div>
+            <!--<input type="text" id="inputLarge" class="form-control" placeholder="Enter a search term">-->
+            <span id="search__submit_button_container_lg" class="search__submit_button_container input-group-btn">
+              <input form="search__form" class="btn-primary btn" type="submit" value="Search" />
+            </span>
+          </div><!-- /input-group -->
+
+
+
         </ul>
-    </li>
-    <li class="dropdown dropdown--red"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Technology <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-            <li><a href="/documents/">Print, scan, copy, fax, or laminate</a></li>
-            <li><a href="/computers/">Find a computer lab</a></li>
-            <li><a href="/network/">Connect to the MSU network</a></li>
-            <li><a href="/help/software/">Get software training</a></li>
-            <li><a href="/borrow/equipment/">Borrow laptops, cameras, phone chargers, and more</a></li>
-            <li class="more"><a href="/technology/">More <i class="glyphicon glyphicon-circle-arrow-right"></i></a></li>
-        </ul>
-    </li>
-    <li class="dropdown dropdown--purple"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Places <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-            <li><a href="/libraries/">Libraries and centers</a></li>
-            <li><a href="/museums/">Museums and Exhibits</a></li>
-            <li><a href="http://library.msstate.edu/services/roomreserve.asp">Meeting rooms</a></li>
-            <li><a href="/places/groupstudy/">Group study rooms</a></li>
-            <li><a href="/floorplans/">Floor plans</a></li>
-            <li><a href="/directions/">Directions, maps, and parking</a></li>
-            <li class="more"><a href="/places/">More <i class="glyphicon glyphicon-circle-arrow-right"></i></a></li>
-        </ul>
-    </li>
-</ul>
-            <ul  class="nav col-lg-4 col-md-3 col-sm-12 col-xs-12 navbar-nav navbar-right msulib__search form-group-sm hidden-sm visible-xs-block hidden-md hidden-lg">
-<!-- smaller search box -->
-                                        <div class="row">
-                                            <div class="col-xs-12"><!--btn group-->
-                                                <button id="search__selector_button" type="button" class="search__selector_button btn col-xs-12 btn-default dropdown-toggle" data-toggle="dropdown">Choose a search type <span class="caret"></span></button>
-
-                                                <ul id="search__selector_list" class="dropdown-menu">
-                                                   <li><a href="#" data-search-type="discovery">Discovery</a></li>
-                                                   <li><a href="#" data-search-type="online_catalog">Online Catalog</a></li>
-                                                   <li><a href="#" data-search-type="databases">Databases</a></li>
-                                                   <li><a href="#" data-search-type="e_journals">E-Journals</a></li>
-                                                   <li><a href="/reserves/" >Course Reserves</a></li>
-                                                   <li><a href="#" data-search-type="digital_collections">Digital Collections</a></li>
-                                                   <li><a href="#" data-search-type="special_collections_finding_aids">Special Collections Finding Aids</a></li>
-                                                   <li><a href="http://guides.library.msstate.edu" >Research Guides</a></li>
-                                                   <li><a href="#" data-search-type="faq">Frequently Asked Questions</a></li>
-                                                   <li><a href="#" data-search-type="library_website">Library Website</a></li>
-                                                    <li class="divider"></li>
-                                                   <li class="dropdown-header">Theses &amp; Dissertations</li>
-                                                   <li><a href="http://sun.library.msstate.edu/ETD-db/ETD-search/search">By MSU students</a></li>
-                                                   <li><a href="https://login.proxy.library.msstate.edu/login?url=http://proquest.umi.com/login?COPT=REJTPUcyODcrM2IwZiZJTlQ9MCZWRVI9Mg==&clientId=2244" >By students worldwide</a></li>
-                                                </ul>
-                                            </div><!-- /btn-group -->
-                                            <div class="col-xs-12 search__input_container" id="search__input_container" >
-<!-- testing -->
-                                              <form id="search__form" action="" onsubmit="return ebscoHostSearchGo(this);" method="post">
-                                              <input id="ebscohostwindow" name="ebscohostwindow" type="hidden" value="1" />
-                                              <input id="ebscohosturl" name="ebscohosturl" type="hidden" value="https://search.ebscohost.com/login.aspx?direct=true&site=eds-live&scope=site&type=0&authtype=ip,guest&custid=magn1307&groupid=main&profile=eds" />
-                                              <input id="ebscohostsearchsrc" name="ebscohostsearchsrc" type="hidden" value="db" />
-                                              <input id="ebscohostsearchmode" name="ebscohostsearchmode" type="hidden" value="+AND+" />
-                                              <input id="ebscohostkeywords" name="ebscohostkeywords" type="hidden" value="" />
-                                              <input name="ebscohostsearchtext" type="text"  class=" form-control" placeholder="Enter a search term" />
-                                              </form>
-                                            </div>
-                                            <!--<input type="text" id="inputLarge" class="form-control" placeholder="Enter a search term">-->
-                                            <div class="col-xs-12">
-                                            <span id="search__submit_button_container" class="search__submit_button_container" class="">
-                                                <input form="search__form" class="btn-primary col-xs-12 btn" type="submit" value="Search" />
-                                            </span>
-                                            </div>
-                                        </div><!-- /input-group -->
-</ul>
-<ul class="nav col-lg-4 col-md-12 col-sm-12 col-xs-12 msulib__search form-group visible-sm-block hidden-xs visible-md-block visible-lg-block">
-<!-- larger search box -->
-<div class="input-group">
-    <div  id="search__dropdown_container_lg" class="input-group-btn">
-        <button id="search__selector_button_lg" type="button" class="btn search__selector_button btn-default dropdown-toggle" data-toggle="dropdown">Choose a search type <span class="caret"></span></button>
-
-                                                <ul id="search__selector_list" class="dropdown-menu">
-                                                   <li><a href="#" data-search-type="discovery">Discovery</a></li>
-                                                   <li><a href="#" data-search-type="online_catalog">Online Catalog</a></li>
-                                                   <li><a href="#" data-search-type="databases">Databases</a></li>
-                                                   <li><a href="#" data-search-type="e_journals">E-Journals</a></li>
-                                                   <li><a href="/reserves/" >Course Reserves</a></li>
-                                                   <li><a href="#" data-search-type="digital_collections">Digital Collections</a></li>
-                                                   <li><a href="#" data-search-type="special_collections_finding_aids">Special Collections Finding Aids</a></li>
-                                                   <li><a href="http://guides.library.msstate.edu" >Research Guides</a></li>
-                                                   <li><a href="#" data-search-type="faq">Frequently Asked Questions</a></li>
-                                                   <li><a href="#" data-search-type="library_website">Library Website</a></li>
-                                                    <li class="divider"></li>
-                                                   <li class="dropdown-header">Theses &amp; Dissertations</li>
-                                                   <li><a href="http://sun.library.msstate.edu/ETD-db/ETD-search/search">By MSU students</a></li>
-                                                   <li><a href="https://login.proxy.library.msstate.edu/login?url=http://proquest.umi.com/login?COPT=REJTPUcyODcrM2IwZiZJTlQ9MCZWRVI9Mg==&clientId=2244" >By students worldwide</a></li>
-                                                </ul>
-    </div><!-- /btn-group -->
-    <div  id="search__input_container_lg" class="search__input_container" >
-      <form id="search__form_lg" action="" onsubmit="return ebscoHostSearchGo(this);" method="post">
-      <input id="ebscohostwindow" name="ebscohostwindow" type="hidden" value="1" />
-      <input id="ebscohosturl" name="ebscohosturl" type="hidden" value="https://search.ebscohost.com/login.aspx?direct=true&site=eds-live&scope=site&type=0&authtype=ip,guest&custid=magn1307&groupid=main&profile=eds" />
-      <input id="ebscohostsearchsrc" name="ebscohostsearchsrc" type="hidden" value="db" />
-      <input id="ebscohostsearchmode" name="ebscohostsearchmode" type="hidden" value="+AND+" />
-      <input id="ebscohostkeywords" name="ebscohostkeywords" type="hidden" value="" />
-      <input name="ebscohostsearchtext" type="text"  class="form-control" placeholder="Enter a search term" />
-      </form>
-    </div>
-    <!--<input type="text" id="inputLarge" class="form-control" placeholder="Enter a search term">-->
-    <span id="search__submit_button_container_lg" class="search__submit_button_container input-group-btn">
-        <input form="search__form" class="btn-primary btn" type="submit" value="Search" />
-    </span>
-</div><!-- /input-group -->
-
-
-
-</ul>
-<div class="visible-md-block visible-lg-block clearfix" >&nbsp;</div>
+        <div class="visible-md-block visible-lg-block clearfix" >&nbsp;</div>
         <div class="clearfix"></div>
 
-<script type="text/html" id="discovery_search_template">
+        <script type="text/html" id="discovery_search_template">
 
-<!-- EBSCO discovery Box Begins -->
+          <!-- EBSCO discovery Box Begins -->
 <script src="http://supportforms.epnet.com/eit/scripts/ebscohostsearch.js" type="text/javascript"><\/script>
 <form id="search__form" action="" onsubmit="return ebscoHostSearchGo(this);" method="post">
 <input id="ebscohostwindow" name="ebscohostwindow" type="hidden" value="1" />
@@ -297,42 +297,42 @@
 <input name="ebscohostsearchtext" type="text"  class="form-control " placeholder="Search Discovery..." />
 </form>
 <!-- EBSCO discovery Box Ends -->
-</script>
+        </script>
 
 
 
-<script type="text/html" id="online_catalog_search_template">
-<form id="search__form" method="get"  action="http://mlp.ent.sirsi.net/client/embedded.search/msstate">
+        <script type="text/html" id="online_catalog_search_template">
+          <form id="search__form" method="get"  action="http://mlp.ent.sirsi.net/client/embedded.search/msstate">
   <input title="Search For:" maxlength="256" name="q" type="text" id="inputLarge" class="form-control " placeholder="Search MSU Catalog..." />
   <input type="hidden" name="ln" value="en_US" />
   <!-- REMOVE <input value="Search" id="searchButton" class="button" title="Search" type="submit" />-->
 </form>
-</script>
+        </script>
 
-<script type="text/html" id="e_journals_search_template">
- <!--journals search-->
+        <script type="text/html" id="e_journals_search_template">
+          <!--journals search-->
       <form id="search__form" method="get"  name="az_user_form" accept-charset="UTF-8" action="http://library.msstate.edu/includes/ebscoatozsearch.asp" target="_top">
 
   <input name="KW" class="form-control " placeholder="Search Journals..." />
 </form>
                                 <!--end journals search-->
-</script>
+        </script>
 
-<script type="text/html" id="databases_search_template">
-<form id="search__form"  name="database" method="get" action="/databases/search.php">
+        <script type="text/html" id="databases_search_template">
+          <form id="search__form"  name="database" method="get" action="/databases/search.php">
 
   <input name="q" class="form-control " placeholder="Find a specific database" />
 </form>
-</script>
+        </script>
 
-<script type="text/html" id="digital_collections_search_template">
-<form id="search__form" action="http://digital.library.msstate.edu/cdm/search/" method="post">
+        <script type="text/html" id="digital_collections_search_template">
+          <form id="search__form" action="http://digital.library.msstate.edu/cdm/search/" method="post">
   <input class="form-control " name="searchterm" placeholder="Search Digital Collections..." />
 </form>
-</script>
+        </script>
 
-<script type="text/html" id="library_website_search_template">
-<script type="text/javascript" src="http://www.google.com/jsapi"><\/script>
+        <script type="text/html" id="library_website_search_template">
+          <script type="text/javascript" src="http://www.google.com/jsapi"><\/script>
 <form id="search__form" action="http://search.library.msstate.edu/index.php" >
   <input type="hidden" name="cx" value="009542639557881537571:9cjafuzpmqk" />
   <input type="hidden" name="cof" value="FORID:10" />
@@ -340,19 +340,19 @@
   <input type="text" name="q" id="q" class="form-control " placeholder="Search MSU Website..." />
 
 </form>
-</script>
+        </script>
 
-<script type="text/html" id="course_reserves_search_template">
+        <script type="text/html" id="course_reserves_search_template">
 
-<form method="get" id="search__form" action="http://mlp.ent.sirsi.net/client/embedded.search/msstate">
+          <form method="get" id="search__form" action="http://mlp.ent.sirsi.net/client/embedded.search/msstate">
   <input type="hidden" name="ln" value="en_US" />
   <input type="hidden" name="ri" value="COURSE_NAME" />
   <input type="hidden" name="te" value="-513262883" />
   <input name="q" id="q" class="form-control " placeholder="Search MSU Course Reserves..." />
 </form>
-</script>
-<script type="text/html" id="special_collections_finding_aids_search_template">
-<form id="search__form" action="http://library.msstate.edu/FindingAid/search.asp" id="cse-search-box">
+        </script>
+        <script type="text/html" id="special_collections_finding_aids_search_template">
+          <form id="search__form" action="http://library.msstate.edu/FindingAid/search.asp" id="cse-search-box">
     <input type="hidden" name="cx" value="009542639557881537571:kpe3dw6h1uq">
     <input type="hidden" name="cof" value="FORID:10">
     <input type="hidden" name="ie" value="UTF-8">
@@ -362,323 +362,317 @@
 <input name="ref" type="hidden" value="">
 <input name="ss" type="hidden" value="">
 </form>
-</script>
-<script type="text/html" id="faq_search_template">
-<form id="search__form"  name="faq" method="get" action="http://ask.library.msstate.edu">
+        </script>
+        <script type="text/html" id="faq_search_template">
+          <form id="search__form"  name="faq" method="get" action="http://ask.library.msstate.edu">
 
   <input name="q" class="form-control " placeholder="Search our FAQs" />
 </form>
-</script>
+        </script>
 
-<script type="text/html" id="digital_collections_search_template">
-<form id="search__form" action="http://digital.library.msstate.edu/cdm/search/" method="post">
+        <script type="text/html" id="digital_collections_search_template">
+          <form id="search__form" action="http://digital.library.msstate.edu/cdm/search/" method="post">
   <input class="form-control " name="searchterm" placeholder="Search Digital Collections..." />
 </form>
-</script>
-
-
-
-
-         </div>
+        </script>
       </div>
-      <!-- /nav -->
+    </div>
+    <!-- /nav -->
 
-      <!-- subsite header -->
-      <!-- removing page-row --<div class="page-row">-->
-         <div class="row subsite shadow-dark">
-            <div class="col-lg-12 subsite__header subsite__header--technology">
-               <h1>Technology</h1>
-               <span class="tagline">Computers</span>
-            </div>
-         </div>
-         <!-- removing page-row --</div>-->
-      <!-- /subsite header -->
-
-      <!-- breadcrumbs -->
-      <div class="page-row">
-         <div class="row">
-            <div class="col-lg-12">
-               <ul class="breadcrumb">
-                  <li class="firstcrumb"><a href="/"><i class="glyphicon glyphicon-home"></i></a></li>
-                  <li><a href="/technology/">Technology</a></li>
-                  <li><a href="/computers/">Computers</a></li>
-                  <li class="active">Availability</li>
-               </ul>
-            </div>
-         </div>
+    <!-- subsite header -->
+    <!-- removing page-row -<div class="page-row">-->
+    <div class="row subsite shadow-dark">
+      <div class="col-lg-12 subsite__header subsite__header--technology">
+        <h1>Technology</h1>
+        <span class="tagline">Computers</span>
       </div>
+    </div>
+    <!-- removing page-row -</div>-->
+    <!-- /subsite header -->
 
-      <!-- expander for sticky footer -->
-      <!-- level 2 content -->
-      <!-- removing page-row --<div class="page-row page-row-expanded level2"> -->
-      <div class="page-row-expanded level2">
-
-         <div class="row">
-
-            <!-- article content -->
-            <div class="col-lg-9 col-xs-12 article">
-
-
-                                 <h2 class="page-header">Computer Availability - IMC Lab</h2>
-
-                  <a href="?room=imc">IMC Lab</a>
-                  <br />
-                  <a href="?room=ref">Reference Lab</a>
-                  <br />
-
-                  <div ng-controller="BeanCounterCtrl" id="floorplan" style="display:inline-block;position:relative;">
-                     <img id="floorplanimage" src="/_assets/img/floorplans/imcmap.png" />
-
-                     <img ng-repeat="computer in computers" style="position:absolute;left:{{percent_x(computer)}};top:{{percent_y(computer)}};" ng-src="/_assets/img/comp_{{display(computer)}}.png" />
-                  </div>
-
-
-            </div><!-- /article -->
-
-            <!-- sidebar -->
-            <div class="col-lg-3 col-xs-12 sidebar">
-
-               <!-- sidebar well 1 -->
-               <div class="well well-lg">
-
-                      <h3>Related Pages</h3>
-    <ul>
-    	<li><a href="/technology/">Technology</a></li>
-        <li><a href="/computers/">Computers</a></li>
-        <li><a href="/network/">Network Connections</a></li>
-        <li><a href="/documents/">Print, scan, copy, fax, or laminate</a></li>
-        <li><a href="http://iprint.its.msstate.edu/">iPrint</a></li>
-        <li><a href="/floorplans/">Floor Plans</a></li>
-        <li><a href="/directions/">Directions, Maps, and Parking</a></li>
-    </ul>               </div>
-
-            </div><!-- /sidebar -->
-
-         </div><!-- /row -->
-
-      </div><!-- /sticky footer expander -->
-
-      <!-- footer -->
-        <div class="row">
-        
-            <footer class="footer letterpress col-xs-12 col-lg-12">
-            
-            	<div class="row">
-                
-                	<div class="col-lg-9">
-                    
-                        <h2>About Mississippi State University Libraries</h2>
-                        
-                        <div class="row">
-                        
-                            <!-- contact info -->
-                            <div class="col-lg-4">
-                                <p title="Physical Address"><i class="glyphicon glyphicon-home"></i> 395 Hardy Rd</p>
-                                <p class="mailaddress" title="Mailing Address"><i class="glyphicon glyphicon-envelope"></i> P.O. Box 5408<br>Mississippi State, MS 39762-5408</p>
-                                <p title="Phone"><i class="glyphicon glyphicon-earphone"></i> (662) 325-7668</p>
-                                <p title="Fax"><i class="glyphicon glyphicon-print"></i> (662) 325-0011</p>
-                                <p title="TTY" class="tty"><img src="/_assets/img/footer-icon-tty-black.png" alt="TTY" /> (662) 325-8183</p>
-                                
-                            </div><!-- /col-lg-4 -->
-                                
-                            <!--  -->
-                            <div class="col-lg-4">
-                                <ul class="footer__links">
-                                    <li><a href="/hours/">Library Hours</a></li>
-                                    <li><a href="/directions/">Directions, Maps, and Parking</a></li>
-                                    <li><a href="/floorplans/">Floor Plans</a></li>
-                                    <li><a href="/tours/">Library Tours</a></li>
-                                    <li><a href="http://msstate.evanced.info/signup/EventCalendar.aspx">Calendar of Events</a></li>
-                                    <li><a href="/directory/">Directory</a></li>
-                                    <li><a href="/about/jobs/">Jobs</a></li>
-                                </ul>
-                            </div><!-- /col-lg-4 -->
-                                
-                            <!--  -->
-                            <div class="col-lg-4">
-                                <ul class="footer__links">
-                                    <li><a href="/about/departments/">Departments</a></li>
-                                    <li><a href="/libraries/">Libraries and Centers</a></li>
-                                    <li><a href="http://library.msstate.edu/specialcollections">Special Collections</a></li>
-                                    <li><a href="/museums/">Museums and Exhibits</a></li>
-                                    <li><a href="/specialevents/">Special Events</a></li>
-                                    <li><a href="/about/partners/">Memberships, Partners, and Consortia</a></li>
-                                    <li class="more"><a href="/about/" title="See more">More <i class="glyphicon glyphicon-circle-arrow-right"></i></a></li>
-                                </ul>
-                            </div><!-- /col-lg-4 -->
-                                
-                            <!-- clear floats --><div class="clearfix visible-lg"></div>
-                        
-                        </div><!-- /row -->
-                        
-                    </div><!-- /col-lg-8 -->
-                
-                	<div class="col-lg-3">
-                    	<h2>Need Help?</h2> 
-                        <ul>
-                        	<li><a href="http://ask.library.msstate.edu">Frequently Asked Questions</a></li>
-                            <li><a href="http://guides.library.msstate.edu/">Research Guides</a></li>
-                            <li><a href="http://guides.library.msstate.edu/citationguides">Citation Guides</a></li>
-                            <li><a href="http://guides.library.msstate.edu/course-guides">Course Guides</a></li>
-                            <li><a href="/tutorials/">Tutorials</a></li>
-                            <li><a href="/workshops/">Workshops</a></li>
-                            <li><a href="/help/instruction/">Library Instruction</a></li>
-                            <li><a href="/help/software/">Software Training</a></li>
-                            <li class="more"><a href="/help/" title="See more">More <i class="glyphicon glyphicon-circle-arrow-right"></i></a></li>
-                        </ul>
-                    </div>
-                
-                </div><!-- /row -->
-                        
-                        <div class="row">
-                        	<div class="col-lg-12 socialmedia">
-                            	<a class="social social-twitter" href="http://www.twitter.com/msu_libraries" title="Twitter">&nbsp;</a>
-                                <a class="social social-facebook" href="http://www.facebook.com/msulibrary" title="Facebook">&nbsp;</a>
-                                <a class="social social-youtube" href="http://www.youtube.com/msulib" title="Youtube">&nbsp;</a>
-                                <a class="social social-pinterest" href="http://www.pinterest.com/MsStateLibrary/" title="Pinterest">&nbsp;</a>
-                                <a class="social social-flickr" href="http://flickr.com/photos/12785883@N03/" title="Flickr">&nbsp;</a>
-                                <a class="social social-myspace" href="http://www.myspace.com/templetonragtimefestival" title="MySpace">&nbsp;</a>
-                                <a class="social social-rss" href="/rss/" title="RSS">&nbsp;</a>
-                                <a class="social social-media" href="/multimedia/" title="Multimedia">&nbsp;</a>
-                            </div>
-                        </div>
-                	
-            </footer>
-            
-    	</div>
-    	<!-- /footer --> 
-        
-        <!-- subfooter -->
-        <div class="row">
-        
-        	<div class="col-xs-12 report ">
-            	
-                <div class="row">
-                
-                	<div class="col-lg-12">
-                    
-                        <ul>
-                            <li><span class="updated">Page updated:</span> <em>Thursday, September 04, 2014</em></li>
-                            <li><a href="/problem/">Report a problem</a></li>
-                            <li><a href="/feedback/">Give feedback</a></li>
-                            <li><a href="http://library.msstate.edu/sitemap/index.asp">Site map</a></li>
-                            <li><a href="http://ask.library.msstate.edu">FAQ</a></li>
-                            <li><a href="http://www.msstate.edu/web/legal.html">Legal</a></li>
-                            <li><a href="/employees/">For Library Employees</a></li>
-                            <li class="uwd"><a href="http://guides.library.msstate.edu/uwd" title="Services for Users with Disabilities">&nbsp;</a></li>
-                        </ul>
-                    
-                    </div><!-- /col-lg-12 -->
-                    
-                </div><!-- /row -->
-                
-            </div><!-- /report -->
-            
+    <!-- breadcrumbs -->
+    <div class="page-row">
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="breadcrumb">
+            <li class="firstcrumb"><a href="/"><i class="glyphicon glyphicon-home"></i></a></li>
+            <li><a href="/technology/">Technology</a></li>
+            <li><a href="/computers/">Computers</a></li>
+            <li class="active">Availability</li>
+          </ul>
         </div>
-        <!-- /subfooter -->
+      </div>
+    </div>
+
+    <!-- expander for sticky footer -->
+    <!-- level 2 content -->
+    <!-- removing page-row -<div class="page-row page-row-expanded level2"> -->
+    <div class="page-row-expanded level2">
+
+      <div class="row">
+
+        <!-- article content -->
+        <div class="col-lg-9 col-xs-12 article">
+
+
+          <h2 class="page-header">Computer Availability - IMC Lab</h2>
+
+          <a href="?room=imc">IMC Lab</a>
+          <br />
+          <a href="?room=ref">Reference Lab</a>
+          <br />
+
+          <div ng-controller="BeanCounterCtrl" id="floorplan" style="display:inline-block;position:relative;">
+            <img id="floorplanimage" src="/_assets/img/floorplans/imcmap.png" />
+
+            <img ng-repeat="computer in computers" ng-style="{'position':'absolute',left:percent_x(computer),top:percent_y(computer)}" ng-src="/_assets/img/comp_{{display(computer)}}.png" />
+          </div>
+
+
+        </div><!-- /article -->
+
+        <!-- sidebar -->
+        <div class="col-lg-3 col-xs-12 sidebar">
+
+          <!-- sidebar well 1 -->
+          <div class="well well-lg">
+
+            <h3>Related Pages</h3>
+            <ul>
+              <li><a href="/technology/">Technology</a></li>
+              <li><a href="/computers/">Computers</a></li>
+              <li><a href="/network/">Network Connections</a></li>
+              <li><a href="/documents/">Print, scan, copy, fax, or laminate</a></li>
+              <li><a href="http://iprint.its.msstate.edu/">iPrint</a></li>
+              <li><a href="/floorplans/">Floor Plans</a></li>
+              <li><a href="/directions/">Directions, Maps, and Parking</a></li>
+          </ul>               </div>
+
+        </div><!-- /sidebar -->
+
+      </div><!-- /row -->
+
+    </div><!-- /sticky footer expander -->
+
+    <!-- footer -->
+    <div class="row">
+      
+      <footer class="footer letterpress col-xs-12 col-lg-12">
         
-		        	<!-- ask a librarian modals -->
+        <div class="row">
+          
+          <div class="col-lg-9">
+            
+            <h2>About Mississippi State University Libraries</h2>
+            
+            <div class="row">
+              
+              <!-- contact info -->
+              <div class="col-lg-4">
+                <p title="Physical Address"><i class="glyphicon glyphicon-home"></i> 395 Hardy Rd</p>
+                <p class="mailaddress" title="Mailing Address"><i class="glyphicon glyphicon-envelope"></i> P.O. Box 5408<br>Mississippi State, MS 39762-5408</p>
+                <p title="Phone"><i class="glyphicon glyphicon-earphone"></i> (662) 325-7668</p>
+                <p title="Fax"><i class="glyphicon glyphicon-print"></i> (662) 325-0011</p>
+                <p title="TTY" class="tty"><img src="/_assets/img/footer-icon-tty-black.png" alt="TTY" /> (662) 325-8183</p>
+                
+              </div><!-- /col-lg-4 -->
+              
+              <!--  -->
+              <div class="col-lg-4">
+                <ul class="footer__links">
+                  <li><a href="/hours/">Library Hours</a></li>
+                  <li><a href="/directions/">Directions, Maps, and Parking</a></li>
+                  <li><a href="/floorplans/">Floor Plans</a></li>
+                  <li><a href="/tours/">Library Tours</a></li>
+                  <li><a href="http://msstate.evanced.info/signup/EventCalendar.aspx">Calendar of Events</a></li>
+                  <li><a href="/directory/">Directory</a></li>
+                  <li><a href="/about/jobs/">Jobs</a></li>
+                </ul>
+              </div><!-- /col-lg-4 -->
+              
+              <!--  -->
+              <div class="col-lg-4">
+                <ul class="footer__links">
+                  <li><a href="/about/departments/">Departments</a></li>
+                  <li><a href="/libraries/">Libraries and Centers</a></li>
+                  <li><a href="http://library.msstate.edu/specialcollections">Special Collections</a></li>
+                  <li><a href="/museums/">Museums and Exhibits</a></li>
+                  <li><a href="/specialevents/">Special Events</a></li>
+                  <li><a href="/about/partners/">Memberships, Partners, and Consortia</a></li>
+                  <li class="more"><a href="/about/" title="See more">More <i class="glyphicon glyphicon-circle-arrow-right"></i></a></li>
+                </ul>
+              </div><!-- /col-lg-4 -->
+              
+              <!-- clear floats --><div class="clearfix visible-lg"></div>
+              
+            </div><!-- /row -->
+            
+          </div><!-- /col-lg-8 -->
+          
+          <div class="col-lg-3">
+            <h2>Need Help?</h2> 
+            <ul>
+              <li><a href="http://ask.library.msstate.edu">Frequently Asked Questions</a></li>
+              <li><a href="http://guides.library.msstate.edu/">Research Guides</a></li>
+              <li><a href="http://guides.library.msstate.edu/citationguides">Citation Guides</a></li>
+              <li><a href="http://guides.library.msstate.edu/course-guides">Course Guides</a></li>
+              <li><a href="/tutorials/">Tutorials</a></li>
+              <li><a href="/workshops/">Workshops</a></li>
+              <li><a href="/help/instruction/">Library Instruction</a></li>
+              <li><a href="/help/software/">Software Training</a></li>
+              <li class="more"><a href="/help/" title="See more">More <i class="glyphicon glyphicon-circle-arrow-right"></i></a></li>
+            </ul>
+          </div>
+          
+        </div><!-- /row -->
+        
+        <div class="row">
+          <div class="col-lg-12 socialmedia">
+            <a class="social social-twitter" href="http://www.twitter.com/msu_libraries" title="Twitter">&nbsp;</a>
+            <a class="social social-facebook" href="http://www.facebook.com/msulibrary" title="Facebook">&nbsp;</a>
+            <a class="social social-youtube" href="http://www.youtube.com/msulib" title="Youtube">&nbsp;</a>
+            <a class="social social-pinterest" href="http://www.pinterest.com/MsStateLibrary/" title="Pinterest">&nbsp;</a>
+            <a class="social social-flickr" href="http://flickr.com/photos/12785883@N03/" title="Flickr">&nbsp;</a>
+            <a class="social social-myspace" href="http://www.myspace.com/templetonragtimefestival" title="MySpace">&nbsp;</a>
+            <a class="social social-rss" href="/rss/" title="RSS">&nbsp;</a>
+            <a class="social social-media" href="/multimedia/" title="Multimedia">&nbsp;</a>
+          </div>
+        </div>
+        
+      </footer>
+      
+    </div>
+    <!-- /footer --> 
+    
+    <!-- subfooter -->
+    <div class="row">
+      
+      <div class="col-xs-12 report ">
+        
+        <div class="row">
+          
+          <div class="col-lg-12">
+            
+            <ul>
+              <li><span class="updated">Page updated:</span> <em>Thursday, September 04, 2014</em></li>
+              <li><a href="/problem/">Report a problem</a></li>
+              <li><a href="/feedback/">Give feedback</a></li>
+              <li><a href="http://library.msstate.edu/sitemap/index.asp">Site map</a></li>
+              <li><a href="http://ask.library.msstate.edu">FAQ</a></li>
+              <li><a href="http://www.msstate.edu/web/legal.html">Legal</a></li>
+              <li><a href="/employees/">For Library Employees</a></li>
+              <li class="uwd"><a href="http://guides.library.msstate.edu/uwd" title="Services for Users with Disabilities">&nbsp;</a></li>
+            </ul>
+            
+          </div><!-- /col-lg-12 -->
+          
+        </div><!-- /row -->
+        
+      </div><!-- /report -->
+      
+    </div>
+    <!-- /subfooter -->
+    
+    <!-- ask a librarian modals -->
 
-        	<!-- Chat Hours -->
-            <div class="modal fade" id="modal--chathours" tabindex="-1" role="dialog" aria-labelledby="modal--chathoursLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                            <h4 class="modal-title" id="modal--chathoursLabel">Chat Hours</h4>
-                        </div><!-- /modal-header -->
-                        <div class="modal-body">
-                            <table class="table table-striped table-hover" style="margin-bottom:0px;">
-                                <tbody>
-                                    <tr>
-                                        <td>Mon - Thurs</td>
-                                        <td>8:00am - 9:00pm</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fri</td>
-                                        <td>10:00am - 5:45pm</td>
-                                    </tr>
-                                        <tr>
-                                        <td>Sat</td>
-                                        <td>Closed</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sun</td>
-                                        <td>1:00pm - 9:00pm</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <p><em>All times Central Time Zone.</em></p>
-                        </div><!-- /modal-body -->
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div><!-- /modal-footer -->
-                    </div><!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
-            </div><!-- /Chat Hours -->
+    <!-- Chat Hours -->
+    <div class="modal fade" id="modal--chathours" tabindex="-1" role="dialog" aria-labelledby="modal--chathoursLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="modal--chathoursLabel">Chat Hours</h4>
+          </div><!-- /modal-header -->
+          <div class="modal-body">
+            <table class="table table-striped table-hover" style="margin-bottom:0px;">
+              <tbody>
+                <tr>
+                  <td>Mon - Thurs</td>
+                  <td>8:00am - 9:00pm</td>
+                </tr>
+                <tr>
+                  <td>Fri</td>
+                  <td>10:00am - 5:45pm</td>
+                </tr>
+                <tr>
+                  <td>Sat</td>
+                  <td>Closed</td>
+                </tr>
+                <tr>
+                  <td>Sun</td>
+                  <td>1:00pm - 9:00pm</td>
+                </tr>
+              </tbody>
+            </table>
+            <p><em>All times Central Time Zone.</em></p>
+          </div><!-- /modal-body -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div><!-- /modal-footer -->
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /Chat Hours -->
 
-            <!-- Reference Desk Hours -->
-            <div class="modal fade" id="modal--refdeskhours" tabindex="-1" role="dialog" aria-labelledby="modal--refdeskhoursLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                            <h4 class="modal-title" id="modal--refdeskhoursLabel">Reference Desk Hours</h4>
-                        </div><!-- /modal-header -->
-                        <div class="modal-body">
-                            <table class="table table-striped table-hover" style="margin-bottom:0px;">
-                                <tbody>
-                                    <tr>
-                                        <td>Mon - Thurs</td>
-                                        <td>7:30am - 11:45pm</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fri</td>
-                                        <td>7:30am - 7:45pm</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sat</td>
-                                        <td>10:00am - 5:45pm</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sun</td>
-                                        <td>1:00pm - 11:45pm</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <p><em>All times Central Time Zone.</em></p>
-                        </div><!-- /modal-body -->
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div><!-- /modal-footer -->
-                    </div><!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
-            </div><!-- /Reference Desk Hours -->
+    <!-- Reference Desk Hours -->
+    <div class="modal fade" id="modal--refdeskhours" tabindex="-1" role="dialog" aria-labelledby="modal--refdeskhoursLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="modal--refdeskhoursLabel">Reference Desk Hours</h4>
+          </div><!-- /modal-header -->
+          <div class="modal-body">
+            <table class="table table-striped table-hover" style="margin-bottom:0px;">
+              <tbody>
+                <tr>
+                  <td>Mon - Thurs</td>
+                  <td>7:30am - 11:45pm</td>
+                </tr>
+                <tr>
+                  <td>Fri</td>
+                  <td>7:30am - 7:45pm</td>
+                </tr>
+                <tr>
+                  <td>Sat</td>
+                  <td>10:00am - 5:45pm</td>
+                </tr>
+                <tr>
+                  <td>Sun</td>
+                  <td>1:00pm - 11:45pm</td>
+                </tr>
+              </tbody>
+            </table>
+            <p><em>All times Central Time Zone.</em></p>
+          </div><!-- /modal-body -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div><!-- /modal-footer -->
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /Reference Desk Hours -->
 
-        	<!-- Reference Desk location -->
-            	<div class="modal fade" id="modal--rs" tabindex="-1" role="dialog" aria-labelledby="modal--rsLabel" aria-hidden="true">
-                   	<div class="modal-dialog">
-                       	<div class="modal-content">
-                           	<div class="modal-header">
-                               	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                <h4 class="modal-title" id="modal--rsLabel">Research Services Location</h4>
-                            </div><!-- /modal-header -->
-      						<div class="modal-body">
-        						<p>Research Services is located on the second floor of <a href="/directions/">Mitchell Memorial Library</a>.</p>
-                                <p align="center"><img src="/_assets/img/floorplans/research-services.jpg" alt="Research Services" title="Research Services" class="img-responsive" /></p>
-      						</div><!-- /modal-body -->
-      						<div class="modal-footer">
-        						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      						</div><!-- /modal-footer -->
-    					</div><!-- /.modal-content -->
- 					</div><!-- /.modal-dialog -->
-				</div><!-- /Research Services -->
+    <!-- Reference Desk location -->
+    <div class="modal fade" id="modal--rs" tabindex="-1" role="dialog" aria-labelledby="modal--rsLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="modal--rsLabel">Research Services Location</h4>
+          </div><!-- /modal-header -->
+          <div class="modal-body">
+            <p>Research Services is located on the second floor of <a href="/directions/">Mitchell Memorial Library</a>.</p>
+            <p align="center"><img src="/_assets/img/floorplans/research-services.jpg" alt="Research Services" title="Research Services" class="img-responsive" /></p>
+          </div><!-- /modal-body -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div><!-- /modal-footer -->
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /Research Services -->
 
 
-            </div><!-- /ask a librarian modals -->      <!-- --------- scripts --------------------------- -->
-
-<script type="text/javascript" src="/_assets/js/combined_scripts.php?scripts=jquery,bootstrap,ebscohostsearch,search_dropdown.js,hours.js,underscore,workshops.js"></script>
-<!--
+  <script type="text/javascript" src="/_assets/js/combined_scripts.php?scripts=jquery,bootstrap,ebscohostsearch,search_dropdown.js,hours.js,underscore,workshops.js"></script>
+  <!--
    <script type="text/javascript" src="/_assets/js/jquery.js"></script>
   <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
@@ -686,118 +680,61 @@
    <script type="text/javascript" src="/_assets/js/search_dropdown.js"></script>
    <script type="text/javascript" src="/_assets/js/hours.js"></script>
 -->
-<script type="text/javascript" src="/utility/hazard.php"></script>
-    <script type="text/javascript" language="javascript">
-function footerPushdown(){
-     
-      $(".report").css("position","relative").css("bottom","0px")
-      $("footer").css("position","relative").css("bottom","0px")
-    white_space = $(".report").offset().top+($(".report").height())- $(window).height();
-    if(white_space<0)
-    {
-      $(".report").css("position","fixed").css("bottom","0px")
-      $("footer").css("position","fixed").css("bottom","0px").css("margin-bottom",$(".report").height()+15);
-      //$("footer").parent().css("margin-top",parseInt(-1*white_space )-20);
-      }
-    else{
+  <script type="text/javascript" src="/utility/hazard.php"></script>
+  <script type="text/javascript" language="javascript">
+    function footerPushdown(){
+      
+        $(".report").css("position","relative").css("bottom","0px")
+        $("footer").css("position","relative").css("bottom","0px")
+        white_space = $(".report").offset().top+($(".report").height())- $(window).height();
+        if(white_space<0)
+        {
+          $(".report").css("position","fixed").css("bottom","0px")
+            $("footer").css("position","fixed").css("bottom","0px").css("margin-bottom",$(".report").height()+15);
+            //$("footer").parent().css("margin-top",parseInt(-1*white_space )-20);
+        }
+        else{
           $(".report").css("position","static").css("bottom","0px")
-          $("footer").css("position","static").css("bottom","0px").css("margin-bottom",0);
-    }
+            $("footer").css("position","static").css("bottom","0px").css("margin-bottom",0);
+        }
     }
 
 $(window).resize(footerPushdown);
 $(document).ready(footerPushdown);
 $(document).ready(function(){});
-    </script>
-    <!-- for sliding toggle "ask a librarian" -->
-    <script type="text/javascript" language="javascript">
-		$( ".askalibrarian__logo" ).click(function() {
-			$( ".needhelp" ).slideToggle( "slow", function() {
-			// Animation complete.
-			});
-		});
-    </script>
-
+  </script>
+  <!-- for sliding toggle "ask a librarian" -->
+  <script type="text/javascript" language="javascript">
+    $( ".askalibrarian__logo" ).click(function() {
+        $( ".needhelp" ).slideToggle( "slow", function() {
+          // Animation complete.
+          });
+        });
+  </script>
+  
   <script type="text/javascript" src="http://www.google-analytics.com/analytics.js"></script>
   <script type="text/javascript" src="http://www.google-analytics.com/plugins/ua/linkid.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','','ga');
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','','ga');
 
-  ga('create', 'UA-53242765-1', {"cookieDomain":"none"});
-  ga('require', 'linkid', {
-           'duration': 45,              // Cookie duration. 30 seconds by default.
-           'levels': 7}); 
-
-
-  ga('send', 'pageview');
-  ga('create', 'UA-53242765-2', {"cookieDomain":"none","name":"raw"});
-  ga('raw.send', 'pageview');
-
-</script>
-
-      <script type="text/javascript">
-
-        /*
-         var img = new Image();
-         img.onload = function() {
-           debugger
-            var image_height = this.height;
-            var image_width = this.width;
-            console.log('Image Width: ' + image_width);
-            console.log('Image Height: ' + image_height);
-            $.get('/api/computers/',null,function(comp_data) {
-               console.log(comp_data);
-               comp_data = $.grep(comp_data, function(computer) {
-                  return computer.room == "imc";
-               });
-
-               $.each(comp_data, function(index, computer) {
-                  var left = ((computer.x / image_width * 100)) + '%';
-                  var top = ((computer.y / image_height * 100)) + '%';
-                  if(computer.status == 'free')
-                    var img = 'comp_available.png';
-                  else if(computer.status == 'used')
-                    var img = 'comp_unavailable.png';
-                  var ca_image = $('<img style="position:absolute;left:'+left+';top:'+top+';" src="/_assets/img/'+img+'" />');
-                  ca_image.attr('id','ca_image_'+computer.id);
-
-                  $('#floorplan').append(ca_image);
-                  //console.log(computer);
-               });
-            }, 'json');
-         }
-
-         img.src = $('#floorplanimage').attr('src');
-         io.socket.get('/computer');
-         io.socket.on('computer', function(updates){
-             console.log("Got an update event");
-             img = $("#floorplanimage");
-              var image_height = img.height;
-              var image_width = img.width;
-               computers = $.grep(updates.data, function(computer) {
-                  return computer.room == "imc";
-               });
-
-               $.each(computers, function(index, computer) {
-                  var left = ((computer.x / image_width * 100)) + '%';
-                  var top = ((computer.y / image_height * 100)) + '%';
-                  if(computer.status == 'free')
-                  var img = 'comp_available.png';
-                  else if(computer.status == 'used')
-                  var img = 'comp_unavailable.png';
-                  console.log("trying to update " + computer.display);
-                  console.log(computer);
-                  $("#ca_image_"+computer.id).attr('src',"/_assets/img/"+img);
+ga('create', 'UA-53242765-1', {"cookieDomain":"none"});
+ga('require', 'linkid', {
+    'duration': 45,              // Cookie duration. 30 seconds by default.
+    'levels': 7}); 
 
 
-             });
-           });
-           */
+ga('send', 'pageview');
+ga('create', 'UA-53242765-2', {"cookieDomain":"none","name":"raw"});
+ga('raw.send', 'pageview');
 
-      </script>
+  </script>
 
-   </body>
+  <script type="text/javascript">
+
+  </script>
+
+</body>
 </html>

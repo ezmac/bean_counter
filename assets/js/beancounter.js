@@ -1,55 +1,27 @@
 //http://www.html5rocks.com/en/tutorials/frameworks/angular-websockets/
 //
-  /*
-app.factory('socket', function($rootScope){
-  var socket = io.connect();
-  return {
-    on: function (eventName, callback){
-      socket.on(eventName, function(){
-        var args = arguments;
-        $rootScope.$apply(function() {
-          callback.apply(socket, args);
-        });
-      });
-    },
-    emit: function (eventName, data, callback) {
-      socket.emit(eventName, data, function() {
-        var args= arguments;
-        $rootScope.$apply(function() {
-          if (callback) {
-            callback.apply(socket, args);
-          }
-        });
-      })
-    };
-  });
-
-function BeancounterCtrl($scope, socket){
-  socket.on('init', function (data){
-    $scope.name = data.name;
-  });
-  socket.on('send:message', function (message) {
-    $scope.message.push(message);
-  });
-  socket.on('change:name
-  dropped planned support for socket to learn a little angular.
-
-  */
-var controllers = angular.module('BeanCounterControllers',[])
 var app = angular.module('BeanCounterApp', [ 'BeanCounterServices'])
-app.controller('BeanCounterCtrl', ['$scope', 'Computer', function($scope, Computer) {
-  var computers = Computer.query(function(data){
 
+app.controller('BeanCounterCtrl', ['$scope', 'Computer', function($scope, Computer) {
+
+  //connect to the websocket.
+  io.socket.get('/api/computers/');
+  io.socket.on('connect', function(){console.log('connect')});
+  var computers = Computer.query(function(data){
     var modified_computers = data;
-/*
-    angular.forEach(data, function(computer, key){
-      console.log(computer);
-      modified_computers[key]['x'] = ((computer.x / image_width * 100)) + '%';
-      modified_computers[key]['y'] = ((computer.y / image_height * 100)) + '%';
-    });
-    */
     $scope.computers = modified_computers;
   });
+
+  io.socket.on('computer', function(data){
+    angular.forEach(data.data, function(data, idx){
+
+      var comp = _.find($scope.computers, function(computer){return computer.id ==data.id;});
+      angular.extend(comp, data);
+    });
+    $scope.$apply();
+  });
+
+
   $scope.img = $("#floorplanimage");
   $scope.real_img = $("<img/>")
     .attr("src", $($scope.img).attr("src"))

@@ -15,7 +15,7 @@ Consider it alpha.  It's usable and probably flexible enough to use for your lab
 
 ## Architecture
 
-Bean Counter has a backend server (node.js), a MySQL database to back it, and a client written in python.  Display is done through javascript using the server's json data.
+Bean Counter has a backend server (node.js), a MySQL database to back it, and a client written in python.  Display is done through javascript using the server's json data. I put angular on it for fun, but it's not cleaned or separated.
 
 ### Client
 
@@ -52,13 +52,14 @@ When a computer pings, it is marked as used and a timeout is set.  When the time
  - support for multiple labs
  - flexible because it offloads display to something else.
  - sweeps up unused computers on an interval
+ - has example angular frontend in wrong location
 
 
 ## Todo
 
+ - move the angular frontend somewhere and clean it up
+ - make non ws clients update on interval
  - secure pings and frees from client (somehow)
- - make front end javascript more friendly (it's a mess, but works)
-   - probably using backbone.js
  - add some computer/lab management
 
 

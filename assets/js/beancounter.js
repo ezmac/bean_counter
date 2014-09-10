@@ -57,13 +57,10 @@ app.controller('BeanCounterCtrl', ['$scope', 'Computer', function($scope, Comput
 
 }]);
 
-
-
-
 var beancounterServices = angular.module('BeanCounterServices', ['ngResource'])
 .factory('Computer', ['$resource',
     function($resource){
-      return $resource('api/computers/',{}, {
+      return $resource('/api/computers/',{}, {
         query: { method:'GET', isArray:true}
       });
     }

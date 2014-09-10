@@ -40,7 +40,14 @@ module.exports = {
       type: "string",
       required: true
     },
-    description: "json",
+    os: {
+      type:"string",
+      required:true
+    },
+    features: {
+      type:"json",
+      required: false
+    },
 
     updateFree : function() {
       if (sails['computerTimeouts'][this.name] != undefined){

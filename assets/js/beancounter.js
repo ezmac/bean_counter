@@ -16,6 +16,7 @@ app.controller('BeanCounterCtrl', ['$scope', 'Computer', function($scope, Comput
     angular.forEach(data.data, function(data, idx){
 
       var comp = _.find($scope.computers, function(computer){return computer.id ==data.id;});
+      debugger
       angular.extend(comp, data);
     });
     $scope.$apply();
@@ -69,6 +70,9 @@ app.filter('pcDisplayImage', function(){
     }
     if (computer.status == 'free') {
       return '/_assets/img/comp_available.png';
+    }
+    if (computer.status == 'dead') {
+      return '/_assets/img/comp_offline.png';
     }
 
   };

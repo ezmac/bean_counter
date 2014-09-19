@@ -51,5 +51,5 @@ module.exports.policies = {
   ComputerController: {
     destroy: false
 
-  }
+  },
 };

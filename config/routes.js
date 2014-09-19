@@ -34,9 +34,6 @@ module.exports.routes = {
   '/': {
     view: 'homepage'
   },
-  'DELETE /computer': {
-    view: '403'
-  }
 
   /***************************************************************************
   *                                                                          *
@@ -47,5 +44,10 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
+
+  'DELETE /computer': {
+    view: '403'
+  },
+
 
 };

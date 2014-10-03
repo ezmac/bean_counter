@@ -13,14 +13,33 @@ app.controller('BeanCounterCtrl', ['$scope', 'Computer', function($scope, Comput
   });
 
   io.socket.on('computer', function(data){
-    angular.forEach(data.data, function(data, idx){
+    $scope.$apply(function() {
+        angular.forEach(data.data, function(data, idx){
 
-      var comp = _.find($scope.computers, function(computer){return computer.id ==data.id;});
-      angular.extend(comp, data);
+          var comp = _.find($scope.computers, function(computer){return computer.id ==data.id;});
+          angular.extend(comp, data);
+        });
     });
-    $scope.$apply();
   });
 
+
+  $scope.comp_statuses = [
+      {name:'free'},
+      {name:'used'},
+      {name:'unavailable'}
+  ];
+
+  $scope.rooms = [
+      {name: 'imc'},
+      {name: 'reference'}
+  ]
+
+  $scope.admin_submit = function() {
+  }
+
+  $scope.$watchCollection('computers', function(newValues, oldValues) {
+      debugger;
+  });
 
   $scope.img = $("#floorplanimage");
   $scope.real_img = $("<img/>")

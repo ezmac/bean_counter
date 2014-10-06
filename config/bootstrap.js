@@ -17,5 +17,6 @@ module.exports.bootstrap = function(cb) {
   setInterval(Computer.sweep, sails.config.beancounter.sweepTimeout);
   sails.computerTimeouts = {};
   Computer.usedTimeout = sails.config.beancounter.usedTimeout;
+
   cb();
 };

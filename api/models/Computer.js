@@ -101,10 +101,20 @@ module.exports = {
         console.log(values);
         cb();
 
-    },
-    afterUpdate: function(computer, cb){
-        Computer.publishUpdate(computer.id, [computer]);
-        cb();
+  },
+  beforeUpdate: function(computer, cb){
+    console.log("The before computer is");
+    console.log(computer)
+    cb();
+  },
+  afterUpdate: function(computer, cb){
+    //there's a possible bug with the return from waterline
+    //the json field for features is returned as a string.
+      if (typeof computer.features == "string"){
+        computer.features = JSON.parse(computer.features);
+      }
+      Computer.publishUpdate(computer.id, [computer]);
+    cb();
 
 
     },

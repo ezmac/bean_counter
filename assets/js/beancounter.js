@@ -90,6 +90,9 @@ app.filter('pcDisplayImage', function(){
     if (computer.status == 'free') {
       return '/_assets/img/comp_available.png';
     }
+    if (computer.status == 'dead') {
+      return '/_assets/img/comp_offline.png';
+    }
 
   };
 });

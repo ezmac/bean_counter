@@ -5,6 +5,7 @@
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
+    "bcrypt": "^0.8.0",
     "ejs": "~0.8.4",
     "grunt": "0.4.2",
     "grunt-contrib-clean": "~0.5.0",
@@ -24,7 +25,11 @@
     "sails-disk": "~0.10.0",
     "sails-mysql": "^0.10.6",
     "validator": "^3.19.0",
-    "waterline": "^0.10.11"
+    "waterline": "^0.10.11",
+    "passport": "^0.2.1",
+    "passport-ldapauth": "^0.2.1",
+    "passport-local": "^1.0.0",
+    "sails-generate-auth": "^0.1.6"
   },
   "scripts": {
     "start": "node app.js",

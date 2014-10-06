@@ -28,6 +28,8 @@
                 <input name="x" ng-model="computer.x" required />
                 <label for="y">Y: </label>
                 <input name="y" ng-model="computer.y" required />
+                <label for="os">OS: </label>
+                <input name="os" ng-model="computer.os" />
                 <label for="status">Status: </label>
                 <select ng-model="computer.status" ng-options="status.name as status.name for status in comp_statuses" name="status" id="status">
                 </select>

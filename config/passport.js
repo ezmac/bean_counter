@@ -16,17 +16,25 @@
 
 var passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy,
-    LdapStrategy = require('passport-ldapauth').Strategy;
+    LdapStrategy = require('passport-ldapauth').Strategy,
+    bcrypt = require('bcrypt');
 
 passport.serializeUser(function(user, done) {
+    done(null, user.id);
+    /*
   console.log("in passport.js serializeUser function")
   if (user) {
     return done(null, user);
   }
+ */
 });
 
-passport.deserializeUser(function(adUser, done) {
-  console.log("in passport.js deserializeUser function")
+passport.deserializeUser(function(id, done) {
+  console.log("in passport.js deserializeUser function");
+  User.findOne({id:id}, function(err,user) {
+      done(err,user);
+  });
+  /*
   User.findOne({ username: adUser.sAMAccountName })
   .exec(function(error, user){
     if (user) {
@@ -64,10 +72,43 @@ passport.deserializeUser(function(adUser, done) {
       });
     }
   });
+ */
 });
+
+passport.use(new LocalStrategy(
+    function(username, password, done) {
+        console.log('In LocalStrategy');
+        console.log(username);
+        console.log(password);
+        User.findOne({email:username}, function(err, user) {
+            if(err) { return done(null, err); }
+            if(!user || user.length < 1) {
+                return done(null, false, {message: 'Incorrect User'});
+            }
+
+            bcrypt.compare(password, user.password, function(err, res) {
+                if(!res)  {
+                    return done(null, false, {
+                        message: 'Invalid password',
+                    });
+                }
+
+                return done(null, user);
+            });
+        });
+    })
+);
 
 
 module.exports = {
+    http: {
+        customMiddleware: function(app) {
+            console.log('middleware for passport');
+            app.use(passport.initialize());
+            app.use(passport.session());
+        }
+    },
+/*
   local:true,
   ldap:{
     server: {
@@ -86,4 +127,5 @@ module.exports = {
         ]
     }
   }
+ */
 };

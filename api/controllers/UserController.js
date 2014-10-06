@@ -10,6 +10,7 @@ var LocalStrategy = require('passport-local').Strategy;
 
 module.exports = {
 
+/*
   login: function (req, res) {
     res.view();
   },
@@ -17,7 +18,6 @@ module.exports = {
   dashboard: function (req, res) {
     res.view();
   },
-
   logout: function (req, res){
     req.session.user = null;
     req.session.flash = 'You have logged out';
@@ -91,6 +91,7 @@ module.exports = {
     req.logout();
     res.redirect('/');
   },
+ */
   _config: {}
 
 };

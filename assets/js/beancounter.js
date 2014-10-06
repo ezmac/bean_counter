@@ -35,10 +35,11 @@ app.controller('BeanCounterCtrl', ['$scope', 'Computer', function($scope, Comput
   ]
 
   $scope.admin_submit = function() {
+      console.log($scope.computers);
+      $scope.$apply();
   }
 
   $scope.$watchCollection('computers', function(newValues, oldValues) {
-      debugger;
   });
 
   $scope.img = $("#floorplanimage");

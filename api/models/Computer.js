@@ -42,7 +42,7 @@ module.exports = {
         },
         os: {
             type:"string",
-            required:true
+//            required:true
         },
         features: {
             type:"json",

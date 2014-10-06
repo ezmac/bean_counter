@@ -1,0 +1,43 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>College of Architecture, Art and Design Library Computer Lab &raquo; Mississippi State University Libraries</title>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"> </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-resource.js"> </script>
+    <script type="text/javascript" src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"> </script>
+    <script type="text/javascript" src="/js/dependencies/sails.io.js">
+    </script>
+    <script type="text/javascript" src="/js/beancounter.js">
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <link href="/_assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body id="ng-app" ng-app='BeanCounterApp'>
+    <div ng-controller="BeanCounterCtrl"> 
+        <form name="compForm" ng-controller="BeanCounterCtrl" method="post" ng-submit="admin_submit()">
+            <div class="computer_container" ng-repeat="computer in computers" ng-style="{'margin-bottom':'10px'}" >
+                <label for="name">Name: </label>
+                <input name="name" ng-model="computer.name" required />
+                <label for="display">Display: </label>
+                <input name="display" ng-model="computer.display" required />
+                <label for="x">X: </label>
+                <input name="x" ng-model="computer.x" required />
+                <label for="y">Y: </label>
+                <input name="y" ng-model="computer.y" required />
+                <label for="status">Status: </label>
+                <select ng-model="computer.status" ng-options="status.name as status.name for status in comp_statuses" name="status" id="status">
+                </select>
+                <label for="room">Room: </label>
+                <select ng-model="computer.room" ng-options="room.name as room.name for room in rooms" name="room" id="room">
+                </select>
+                <br />
+            </div>
+            <input type="submit" id="submit" value="Submit" />
+        </form>
+    </div>
+</body>
+</html>

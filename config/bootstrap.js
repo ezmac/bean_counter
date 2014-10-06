@@ -18,5 +18,10 @@ module.exports.bootstrap = function(cb) {
   sails.computerTimeouts = {};
   Computer.usedTimeout = sails.config.beancounter.usedTimeout;
 
-  cb();
+  User.findOrCreate(
+      {username:'admin'},
+      {username:'admin',password:'admin'}
+  ).exec(cb);
+
+  //cb();
 };

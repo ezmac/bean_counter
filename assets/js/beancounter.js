@@ -5,13 +5,13 @@ var app = angular.module('BeanCounterApp', ['ui.bootstrap','BeanCounterServices'
 app.controller('BeanCounterCtrl', ['$scope', 'Computer', function($scope, Computer) {
 
   //connect to the websocket.
-  io.socket.get('/api/computers/');
-  io.socket.on('connect', function(){console.log('connect')});
+  //io.socket.get('/api/computers/');
+  //io.socket.on('connect', function(){console.log('connect')});
   var computers = Computer.query(function(data){
     var modified_computers = data;
     $scope.computers = modified_computers;
   });
-
+/*
   io.socket.on('computer', function(data){
     $scope.$apply(function() {
         angular.forEach(data.data, function(data, idx){
@@ -21,6 +21,7 @@ app.controller('BeanCounterCtrl', ['$scope', 'Computer', function($scope, Comput
         });
     });
   });
+ */
 
 
   $scope.comp_statuses = [
@@ -35,8 +36,16 @@ app.controller('BeanCounterCtrl', ['$scope', 'Computer', function($scope, Comput
   ]
 
   $scope.admin_submit = function() {
-      console.log($scope.computers);
-      //$scope.$apply();
+      console.log($scope.computers[0]);
+      $scope.computers.forEach(function(comp) {
+          comp.$save();
+      });
+      /*
+      $scope.computers.forEach(function(comp) {
+          console.log(comp);
+          comp.$save();
+      });
+     */
   }
 
   $scope.$watchCollection('computers', function(newValues, oldValues) {
@@ -158,8 +167,6 @@ app.directive('computerImage', function(){
 var beancounterServices = angular.module('BeanCounterServices', ['ngResource'])
 .factory('Computer', ['$resource',
     function($resource){
-      return $resource('/api/computers/',{}, {
-        query: { method:'GET', isArray:true}
-      });
+      return $resource('/api/computers/:id',{id:'@id'});
     }
-  ])
+  ]);

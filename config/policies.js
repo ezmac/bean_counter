@@ -51,6 +51,9 @@ module.exports.policies = {
     AuthController: {
         '*': true,
     },
+    AdminController: {
+        '*': 'authenticated',
+    },
     ComputerController: {
         '*': true,
         destroy: false

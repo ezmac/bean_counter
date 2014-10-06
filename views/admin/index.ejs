@@ -36,6 +36,11 @@
                 <label for="room">Room: </label>
                 <select ng-model="computer.room" ng-options="room.name as room.name for room in rooms" name="room" id="room">
                 </select>
+                <label for="software">Software: </label>
+                <textarea name="software" ng-model="computer.features.software" rows="5" ng-list></textarea>
+                <label for="hardware">Hardware: </label>
+                <textarea name="hardware" ng-model="computer.features.hardware" rows="5" ng-list></textarea>
+                <br />
                 <br />
             </div>
             <input type="submit" id="submit" value="Submit" />

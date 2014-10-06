@@ -24,7 +24,9 @@ module.exports = {
                     return;
                 }
                 console.log(req.isAuthenticated());
-                res.redirect('/');
+                var redirect_to = req.session.redirect_to ? req.session.redirect_to : '/';
+                res.redirect(redirect_to);
+                //res.redirect('/');
                 return;
             });
         })(req, res);

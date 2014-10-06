@@ -52,5 +52,6 @@ module.exports.routes = {
         view: '403'
     },
 
+    'get /admin': 'Admin.index',
 
 };

@@ -10,6 +10,10 @@ module.exports = {
 
   connection: 'localMysqlServer',
   attributes: {
+      username: {
+          type: 'string',
+          required: true,
+      },
     firstName: {
       type: 'string'
     },

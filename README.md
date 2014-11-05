@@ -1,4 +1,5 @@
-# Bean Counter
+# Computer availability script 
+###### Better project pending
 
 A computer usage tracker written for Node.js using [Sails](http://sailsjs.org)
 

@@ -17,6 +17,7 @@ print "loop time is "+ str(loop_time)
 
 def setUnused(comp_name):
     request = urllib2.Request(SERVER_URL+"free", post_data)
+    request.add_header('host','labs.dockerhost')
     response = urllib2.urlopen(request)
 
     print response.read()

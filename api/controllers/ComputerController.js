@@ -67,7 +67,7 @@ module.exports = {
                 console.log("It was a websocket!");
             }
             return res.json(
-                computers
+                _.each(computers,function(c){delete c.updatedAt;delete c.createdAt;})
             );
         });
     },

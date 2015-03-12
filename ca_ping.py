@@ -34,9 +34,9 @@ def setStatus(comp_name, status, post_data):
     request.add_header('host','labs.dockerhost')
     try:
       response = urllib2.urlopen(request)
+      print response.read()
     except Exception as e:
       pass
-    print response.read()
 
 print "you should see the correct computer name here", comp_name
 

@@ -23,14 +23,20 @@ print "loop time is "+ str(loop_time)
 print "loop time is "+ str(loop_time)
 
 def setUnused(comp_name):
-    request = urllib2.Request(SERVER_URL+"free", post_data)
-    request.add_header('host','labs.dockerhost')
-    response = urllib2.urlopen(request)
-
-    print response.read()
+    setStatus(comp_name,'free',post_data)
 
 atexit.register(setUnused, comp_name=comp_name)
 
+
+def setStatus(comp_name, status, post_data):
+
+    request = urllib2.Request(SERVER_URL+status, post_data)
+    request.add_header('host','labs.dockerhost')
+    try:
+      response = urllib2.urlopen(request)
+    except Exception as e:
+      pass
+    print response.read()
 
 print "you should see the correct computer name here", comp_name
 
@@ -41,10 +47,7 @@ while True:
     print data['name']
     post_data = urllib.urlencode(data)
 
-    request = urllib2.Request(SERVER_URL+"ping", post_data)
-    request.add_header('host','labs.dockerhost')
-    response = urllib2.urlopen(request)
+    setStatus(comp_name,'ping',post_data)
 
-    print response.read()
     time.sleep(loop_time)
 

@@ -10,8 +10,8 @@ SERVER_URL = 'http://130.18.123.3/api/computers/'
 #if len(sys.argv) < 1:
 #  exit("please specify computer name")
 #if len(sys.argv) == 3:
-computer_name = socket.gethostname()
-if len(sys.argv) >= 1:
+comp_name = socket.gethostname()
+if len(sys.argv) > 1:
   comp_name = sys.argv[1]
 loop_time = 60
 if len(sys.argv) == 3:

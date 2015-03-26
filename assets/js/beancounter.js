@@ -5,23 +5,30 @@ var app = angular.module('BeanCounterApp', ['ui.bootstrap','BeanCounterServices'
 app.controller('BeanCounterCtrl', ['$scope', 'Computer', function($scope, Computer) {
 
   //connect to the websocket.
-  //io.socket.get('/api/computers/');
-  //io.socket.on('connect', function(){console.log('connect')});
+  io.socket.get('/api/computers/');
+  io.socket.on('connect', function(){console.log('connect')});
   var computers = Computer.query(function(data){
     var modified_computers = data;
     $scope.computers = modified_computers;
   });
-/*
-  io.socket.on('computer', function(data){
+  io.socket.on('computer', function(comps){
     $scope.$apply(function() {
-        angular.forEach(data.data, function(data, idx){
+        if(!_.isArray(comps.data)) {
+            comps.data = [comps.data];
+        }
+        angular.forEach(comps.data, function(data, idx){
 
-          var comp = _.find($scope.computers, function(computer){return computer.id ==data.id;});
-          angular.extend(comp, data);
+          var comp = _.find($scope.computers, 
+            function(computer){
+                return _.isUndefined(computer.id) ? false : computer.id ==data.id;
+            }
+          );
+          if(!_.isUndefined(comp)) {
+              angular.extend(comp, data);
+          }
         });
     });
   });
- */
 
 
   $scope.comp_statuses = [
@@ -36,6 +43,7 @@ app.controller('BeanCounterCtrl', ['$scope', 'Computer', function($scope, Comput
   ]
 
   $scope.admin_submit = function() {
+      debugger;
       console.log($scope.computers[0]);
       $scope.computers.forEach(function(comp) {
           comp.$save();
@@ -94,13 +102,13 @@ app.filter('room', function(){
 app.filter('pcDisplayImage', function(){
   return function(computer){
     if (computer.status == 'used') {
-      return '/_assets/img/comp_unavailable.png';
+      return 'http://localhost/_assets/img/comp_unavailable.png';
     }
     if (computer.status == 'free') {
-      return '/_assets/img/comp_available.png';
+      return 'http://localhost/_assets/img/comp_available.png';
     }
     if (computer.status == 'dead') {
-      return '/_assets/img/comp_offline.png';
+      return 'http://localhost/_assets/img/comp_offline.png';
     }
 
   };
@@ -164,9 +172,13 @@ app.directive('computerImage', function(){
 });
 
 
+
 var beancounterServices = angular.module('BeanCounterServices', ['ngResource'])
 .factory('Computer', ['$resource',
     function($resource){
-      return $resource('/api/computers/:id',{id:'@id'});
+       return $resource('/api/computers/:id',{id:'@id'}, {
+        query: { method:'GET', isArray:true},
+        save: { method:'POST', isArray:true}
+      });
     }
-  ]);
+  ])

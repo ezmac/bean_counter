@@ -113,7 +113,7 @@ module.exports = {
       if (typeof computer.features == "string"){
         computer.features = JSON.parse(computer.features);
       }
-      Computer.publishUpdate(computer.id, [computer]);
+      console.log('===================UPDATED====================');
     cb();
 
 
@@ -129,6 +129,7 @@ module.exports = {
                     computer.status="free";
                     computer.timestamp = now;
                     computer.save();
+                    Computer.publishUpdate(computer.id, [computer]);
                     console.log("making "+computer.display+" free in sweep.");
                 }
             };

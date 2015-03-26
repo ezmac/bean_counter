@@ -111,7 +111,12 @@ module.exports = {
     //there's a possible bug with the return from waterline
     //the json field for features is returned as a string.
       if (typeof computer.features == "string"){
+        try{
         computer.features = JSON.parse(computer.features);
+        }
+        catch(exception){
+          computer.features={};
+        }
       }
       console.log('===================UPDATED====================');
     cb();

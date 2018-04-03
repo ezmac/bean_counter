@@ -1,8 +1,13 @@
 #  This project is defunct;
 
-I'm leaving it because it can give you a huge head start to reproduce something similar, but don't use as is. It may contain vulnerabilities.
+I'm leaving it because it can give you a huge head start to reproduce something similar, but don't use as is. It contains vulnerabilities.
 
+Github has flagged the EJS dependency as having the following vulnerabilities:
+ - CVE-2017-1000188 - Moderate severity
+ - CVE-2017-1000189 - High severity
+ - CVE-2017-1000228 - High severity
 
+You have been warned.
 
 # Computer availability script 
 ###### Better project pending

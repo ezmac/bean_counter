@@ -1,3 +1,9 @@
+#  This project is defunct;
+
+I'm leaving it because it can give you a huge head start to reproduce something similar, but don't use as is. It may contain vulnerabilities.
+
+
+
 # Computer availability script 
 ###### Better project pending
 
